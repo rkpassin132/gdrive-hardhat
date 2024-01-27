@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #020d18 !important;
+  color: white !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.compoenent-container {
+  background-color: #020d18;
+}
+.header-container{
+  background-image: url(https://udownload.netlify.app/images/uploads/user-hero-bg.jpg);  
+}
+.page-title{
+  font-family: 'Dosis', sans-serif;
+  font-size: 36px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.card-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.card-container .card{
+  max-width: 300px;
+  min-width: 200px;
+}
+.card-actions-top{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.card-actions-top .btn {
+  background: #282727ba;
+  transition: 0.5s;
+}
+.card-actions-top .btn span {
+  transition: 2s;
+  display: none;
+}
+.card-actions-top .btn:hover{
+  background: #151516f5;
+}
+.card-actions-top .btn:hover span {
+  display: inline;
+}
+.footer{
+  border-top: 1px solid #405266;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: #0f2133;
+}
+.footer .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
