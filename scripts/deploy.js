@@ -10,8 +10,8 @@ async function main() {
 
     // online verification of contract deployment
     if (network.config.chainId === 4 && process.env.ETHERSCAN_API_KEY) {
-        await simpleStorage.deployTransaction.wait(6)
-        await verify(simpleStorage.address, [])
+        await uploadStorage.deployTransaction.wait(6)
+        await verify(uploadStorage.address, [])
     }
 }
 
