@@ -14,13 +14,24 @@ code {
     monospace;
 }
 
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  filter: invert(1);
+}
+
 .compoenent-container {
   background-color: #020d18;
 }
-.header-container{
-  background-image: url(https://udownload.netlify.app/images/uploads/user-hero-bg.jpg);  
+.header-container {
+  background-image: url(https://udownload.netlify.app/images/uploads/user-hero-bg.jpg);
 }
-.page-title{
+.page-title {
   font-family: 'Dosis', sans-serif;
   font-size: 36px;
   color: #ffffff;
@@ -28,7 +39,7 @@ code {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.card-container{
+.card-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,11 +48,11 @@ code {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.card-container .card{
+.card-container .card {
   max-width: 300px;
   min-width: 200px;
 }
-.card-actions-top{
+.card-actions-top {
   position: absolute;
   top: 5px;
   left: 5px;
@@ -58,23 +69,23 @@ code {
   transition: 2s;
   display: none;
 }
-.card-actions-top .btn:hover{
+.card-actions-top .btn:hover {
   background: #151516f5;
 }
 .card-actions-top .btn:hover span {
   display: inline;
 }
-.footer{
+.footer {
   border-top: 1px solid #405266;
   padding-top: 20px;
   padding-bottom: 10px;
   background-color: #0f2133;
 }
-.footer .container{
+.footer .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }

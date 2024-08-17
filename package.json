@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "npx hardhat run --network localhost scripts/deploy.js"
+    "deploy": "npx hardhat run --network localhost scripts/deploy.js"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.2",

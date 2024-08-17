@@ -7,12 +7,14 @@ import Toastr from './Toastr'
 import { ethers } from 'ethers'
 import { postImage } from '../service/pinata'
 import Share from './Share'
+import AboutUs from './AboutUs'
 
 export default function Header({ account, provider, contract }) {
   const [file, setFile] = useState(null)
   const [toastr, setToastr] = useState(null)
   const [uploading, setUploading] = useState(false)
   const [showShare, setShowShare] = useState(false)
+  const [showAboutUs, setShowAboutUs] = useState(false)
   const formRef = useRef(null)
 
   const handleSubmit = async (e) => {
@@ -32,8 +34,8 @@ export default function Header({ account, provider, contract }) {
           formRef.current.reset()
         })
         .catch((error) => {
-          setToastr({ message: error.reason, type: 'danger' });
-          return;
+          setToastr({ message: error.reason, type: 'danger' })
+          return
         })
       setUploading(false)
     } catch (error) {
@@ -68,7 +70,13 @@ export default function Header({ account, provider, contract }) {
   }
   return (
     <>
-      {toastr && <Toastr msg={toastr?.message || ''} type={toastr.type} onCloseToast={() => setToastr(null)} />}
+      {toastr && (
+        <Toastr
+          msg={toastr?.message || ''}
+          type={toastr.type}
+          onCloseToast={() => setToastr(null)}
+        />
+      )}
       {showShare && (
         <Share
           showModel={showShare}
@@ -76,15 +84,26 @@ export default function Header({ account, provider, contract }) {
           onClose={() => setShowShare(false)}
         />
       )}
+      {showAboutUs && (
+        <AboutUs
+          showModel={showAboutUs}
+          onClose={() => setShowAboutUs(false)}
+        />
+      )}
       <div className="header-container">
         <Navbar expand="lg" className="bg-body-transparen">
           <Container fluid>
             <Navbar.Brand href="#" className="text-white">
-              Drive
+              <img className="logo-img" src="/logo.png" alt="logo" />
             </Navbar.Brand>
-            <Button variant="warning" onClick={() => setShowShare(true)}>
-              Share <i className="fa fa-share"></i>
-            </Button>
+            <div className="header-right">
+              <Button variant="info" onClick={() => setShowAboutUs(true)}>
+                About <i className="fa fa-info"></i>
+              </Button>
+              <Button variant="warning" onClick={() => setShowShare(true)}>
+                Share <i className="fa fa-share"></i>
+              </Button>
+            </div>
           </Container>
         </Navbar>
         <div className="text-center">
